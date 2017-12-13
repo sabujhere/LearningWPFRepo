@@ -12,6 +12,7 @@ namespace ConsoleApplication1
         {
             //this some changes
             //more change
+            //here it is stash
             //after stash
         }
     }
