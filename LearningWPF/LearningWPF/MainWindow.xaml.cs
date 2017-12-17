@@ -24,5 +24,24 @@ namespace LearningWPF
         {
             InitializeComponent();
         }
+
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(FullName.Text);
+            sb.Append(Male.IsChecked != null && (bool) Male.IsChecked ? " Male" : " Female");
+            sb.Append(Laptop.IsChecked != null && (bool) Laptop.IsChecked ? " Laptop" : string.Empty);
+            sb.Append(Desktop.IsChecked != null && (bool)Desktop.IsChecked ? " Desktop" : string.Empty);
+            sb.Append(Tablet.IsChecked != null && (bool)Tablet.IsChecked ? " Tablet" : string.Empty);
+            sb.Append(JobComboBox.SelectionBoxItem);
+            sb.Append(DeliveryDate.SelectedDate);
+            MessageBox.Show(sb.ToString());
+
+        }
     }
 }
