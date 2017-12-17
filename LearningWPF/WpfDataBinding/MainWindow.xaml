@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
+        <StackPanel  Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Left">
+                <TextBlock Text="Name: " Margin="5"/>
+                <TextBox Margin="5" Text="{Binding Name, Mode=TwoWay}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
+                <TextBlock Text="Age: " Margin="5"/>
+                <TextBox Margin="5" Text="{Binding Age, Mode=TwoWay}"/>
+            </StackPanel>
+            <Button Content="Change" Click="Button_Click"></Button>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Left">
+                <TextBlock Text="Name: " Margin="5"/>
+                <TextBlock Margin="5" Text="{Binding Name}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
+                <TextBlock Text="Age: " Margin="5"/>
+                <TextBlock Margin="5" Text="{Binding Age}"/>
+            </StackPanel>
+            <Button Content="Change" Click="Button_Click"></Button>
+        </StackPanel>
         
     </Grid>
 </Window>
